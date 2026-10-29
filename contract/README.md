@@ -4,6 +4,9 @@ Read this entry before working with the project's code or contract. PCK guides
 design decisions through core Skills, language profiles, and the project's own
 Markdown requirements.
 
+`VERSION` identifies the portable package release. The host project maintains
+its own contract revisions independently.
+
 ## Authority
 
 Platform instructions and the user's authorized decisions govern all work.
@@ -19,8 +22,9 @@ Apply the three core Skills together:
 | [direct-statements](skills/direct-statements/SKILL.md) | Express current facts and requirements without version comparisons or reconstruction narratives. |
 
 `consistency-first` and `direct-statements` have equal priority. The core Skills
-govern different aspects of the same work. Project decisions give their concrete
-application; language profiles provide reusable writing defaults.
+apply together across implementation and contract maintenance. They govern how
+work is performed; project requirements supply concrete decisions within their
+scope. For contract work, `pck-maintain` governs the maintenance procedure.
 
 For a particular project decision, apply:
 
@@ -33,9 +37,11 @@ behavior-owning types. That preference leaves ownership and lifetime obligations
 in effect. Keep project preferences in the project contract. Apply every other
 compatible requirement.
 
-Local code is evidence for choices the contract leaves open. Resolve genuine
-contradictions through the user's applicable decisions. A new material decision
-requires clarification when the existing instructions do not settle it.
+Local code is evidence for choices the contract leaves open. Apply explicit
+user decisions within their scope to resolve a conflict involving a core Skill,
+the maintenance procedure, or project requirements. A project convention does
+not silently waive a core principle or authorize a contract change. Ask for an
+unresolved material decision before changing the governed requirement.
 
 ## Read for the task
 
@@ -62,7 +68,9 @@ Read a project-provided profile when working in another language.
 During implementation, preserve the established owner and failure behavior.
 Examine the final change for duplicated responsibilities, unnecessary layers,
 extra ownership paths, and inconsistent interfaces. Carry out the project's
-own validation requirements and describe the actual result.
+own validation requirements and describe the actual result. The host project
+owns its build, execution, review, and checker requirements. Contract authoring
+and implementing project checkers are separately authorized tasks.
 
 ## Project content
 

@@ -14,6 +14,10 @@ Preserve the intended obligation strength. A requirement, prohibition,
 preference, and permission have different meanings. Use direct wording that
 retains those meanings; do not turn a preference into an unconditional command.
 
+A paragraph may contain several obligations. Preserve and review each
+obligation and its qualifiers; group related requirements where they can be
+understood together.
+
 State the owner, dependency, lifetime, interface, or failure boundary when it
 is part of the project's requirement. Include numeric limits and required
 validation behavior when the project specifies them. Explain a present
@@ -143,8 +147,11 @@ together.
   examples and necessary explanations remain available beside their rules.
 - There is one authoritative statement of each requirement, with compatible
   cross-topic decisions and functioning navigation.
+- Reorganization preserves requirements and usable references; additions,
+  removals, and changes in obligation are authorized.
 - Project exceptions identify the affected default and applicable scope.
 - Prose, examples, paths, and referenced interfaces agree with the project's
-  actual decisions.
+  actual decisions. Existing capabilities and requirements to implement a
+  capability are distinguishable, with a clear owner.
 - The maintained text describes current requirements and can be used without
   the input material.
