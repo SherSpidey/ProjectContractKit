@@ -5,8 +5,9 @@ ownership, dependencies, and conventions coherent as its code grows. Its
 contracts and Skills express the design decisions that should guide each change.
 
 The portable package is [contract/](contract/README.md). It contains three core
-Skills, complete C++ and HLSL writing profiles, and a Skill for maintaining
-project contracts. Project requirements are written as Markdown topics.
+Skills, complete C++ and HLSL writing profiles, a task workflow with independent
+reviews, and a Skill for maintaining project contracts. Project requirements
+are written as Markdown topics.
 
 ## Use in a project
 
@@ -18,9 +19,12 @@ authorization required by that project:
 
 ~~~markdown
 <!-- BEGIN PCK -->
-Read `contract/README.md` before editing project files. Follow its priority and
-reading rules. Use `contract/skills/pck-maintain/SKILL.md` to create, convert,
-update, or reorganize the project contract.
+Read `contract/README.md` before editing project files. Follow its authority
+and task-reading rules. Read all three core Skills and the applicable language
+profile and project topics. Use `contract/skills/pck-maintain/SKILL.md` to
+create, convert, or maintain the project contract.
+Follow `contract/skills/pck-workflow/SKILL.md` from task start. Complete its
+three independent reviews before declaring this round's changes complete.
 <!-- END PCK -->
 ~~~
 
@@ -40,9 +44,11 @@ applicable language profile and project topics before making decisions they
 govern. Follow related interfaces and ownership into neighboring topics when
 the work reaches them.
 
-Use the contract to examine the resulting code's responsibilities, data flow,
-ownership, dependencies, and conventions. Apply the project's own build,
-execution, and review requirements to the actual change.
+Follow [pck-workflow](contract/skills/pck-workflow/SKILL.md) from task start
+through the independent reviews of the completed changes. Its named review
+assignments support host-specified models and autonomous model selection.
+Apply the project's own build, execution, and review requirements to the actual
+change.
 
 Contract maintenance operates directly on the Markdown files. The agent
 preserves meaning, resolves authorized decisions, and keeps navigation useful.

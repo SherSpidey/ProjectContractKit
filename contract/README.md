@@ -4,6 +4,10 @@ Read this entry before working with the project's code or contract. PCK guides
 design decisions through core Skills, language profiles, and the project's own
 Markdown requirements.
 
+For a task that changes files, follow
+[pck-workflow](skills/pck-workflow/SKILL.md) from task start through the three
+independent reviews required before declaring this round complete.
+
 `VERSION` identifies the portable package release. The host project maintains
 its own contract revisions independently.
 
@@ -24,7 +28,9 @@ Apply the three core Skills together:
 `consistency-first` and `direct-statements` have equal priority. The core Skills
 apply together across implementation and contract maintenance. They govern how
 work is performed; project requirements supply concrete decisions within their
-scope. For contract work, `pck-maintain` governs the maintenance procedure.
+scope. [pck-workflow](skills/pck-workflow/SKILL.md) governs task execution and
+independent final review. For contract work, `pck-maintain` governs the
+maintenance procedure.
 
 For a particular project decision, apply:
 
@@ -92,3 +98,6 @@ Use [pck-maintain](skills/pck-maintain/SKILL.md) to create, convert, add, remove
 or reorganize contract content. Changes to requirements follow the user's
 authorization. Ordinary implementation work does not silently change its
 governing contract.
+
+Before declaring this round's changes complete, finish the independent reviews
+and completion checks in [pck-workflow](skills/pck-workflow/SKILL.md).

@@ -127,8 +127,10 @@ or contradictory statements, check links and navigation, and confirm that a
 reader can determine which requirements apply. Preserve the distinction between
 an example and an obligation.
 
-Deliver the maintained files and describe the completed scope and any
-unresolved decisions in the conversation. Use the host project's version control
-for contract history within its commit and publishing permissions. Keep the
-maintained contract focused on current requirements; describe authorized changes
-in the delivery conversation without adding maintenance-history documents.
+Complete the independent reviews in [pck-workflow](../pck-workflow/SKILL.md)
+before declaring this round's maintained files complete. Describe the completed
+scope and any unresolved decisions in the conversation. Use the host project's
+version control for contract history within its commit and publishing
+permissions. Keep the maintained contract focused on current requirements;
+describe authorized changes in the delivery conversation without adding
+maintenance-history documents.
