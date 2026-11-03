@@ -8,6 +8,10 @@ For a task that changes files, follow
 [pck-workflow](skills/pck-workflow/SKILL.md) from task start through the three
 independent reviews required before declaring this round complete.
 
+After context compaction or summary-based resumption, complete the workflow's
+[context recovery](skills/pck-workflow/SKILL.md#recover-context) before
+continuing a PCK task.
+
 `VERSION` identifies the portable package release. The host project maintains
 its own contract revisions independently.
 

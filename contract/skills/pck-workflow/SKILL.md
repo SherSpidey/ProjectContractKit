@@ -32,6 +32,39 @@ Implement within the agreed decisions and run the project's applicable
 validation as the main agent. Reviewers examine code and evidence; the main
 agent remains responsible for required builds, tests, and runtime checks.
 
+## Recover context
+
+When the host reports context compaction or work resumes from a summary or
+handoff, complete this recovery before continuing task work or declaring
+completion. This applies to the main agent and each reviewer in a PCK task,
+including review-only assignments. A summary locates progress; the current
+contract files supply the requirements.
+
+1. Reread the applicable project agent instructions,
+   [package entry](../../README.md), this workflow, and all three core Skills.
+2. Reread the project entry, when present, and its required shared topics.
+   Reread the complete topics, language profiles, and rule references applicable
+   to the current task. For contract maintenance, also reread
+   [pck-maintain](../pck-maintain/SKILL.md) and its
+   [writing guide](../pck-maintain/references/contract-writing.md).
+3. Reconcile the latest user instructions with the current repository and
+   existing task record. Verify scope, authorization, exclusions, model
+   assignments, the baseline and cumulative changes, active tools and
+   reviewers, review rounds and findings, and validation status. Preserve the
+   review-round count and outstanding obligations across recovery.
+4. Briefly report the files actually reread, any remaining context or evidence
+   gaps, and the next action before resuming the task.
+
+Read required files in bounded batches and retrieve any truncated portions.
+Headings, search matches, recollection, and summaries do not fulfill rereading.
+If a required file cannot be read, report the gap and hold work that depends on
+it while continuing independent recovery work. Use the existing task record
+without creating recovery logs or state files.
+
+Repeat this recovery after each compaction or summary-based resumption.
+Ordinary follow-up messages use the task-reading rules for their affected
+scope.
+
 ## Select the review models
 
 Use these stable assignment names:

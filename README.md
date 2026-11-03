@@ -25,6 +25,8 @@ profile and project topics. Use `contract/skills/pck-maintain/SKILL.md` to
 create, convert, or maintain the project contract.
 Follow `contract/skills/pck-workflow/SKILL.md` from task start. Complete its
 three independent reviews before declaring this round's changes complete.
+After context compaction or summary-based resumption, complete the workflow's
+context recovery before continuing.
 <!-- END PCK -->
 ~~~
 
