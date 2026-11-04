@@ -90,11 +90,10 @@ introduces them.
 
 ### Signatures and calls
 
-Keep a short signature or call on one line. When wrapping, keep the first
-parameter or argument on the line containing the function name and opening
-parenthesis. Place each remaining parameter or argument on its own
-continuation line. Put closing punctuation on the last parameter or argument
-line.
+Keep a short signature or call on one line. When wrapping, use one parameter
+or argument per line: the first stays with the function name and opening
+parenthesis, each remaining one gets a continuation line, and closing
+punctuation stays on the last parameter or argument line.
 
 ~~~cpp
 void CopyVisibleRange(const BufferView& source,

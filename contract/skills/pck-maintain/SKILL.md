@@ -1,136 +1,51 @@
 ---
 name: pck-maintain
-description: Create, convert, amend, or reorganize a project's Markdown contract while preserving its meaning, scope, and useful detail.
+description: Create or maintain a concise Markdown project contract while preserving its authorized meaning.
 ---
 
 # Maintain the Project Contract
 
-Read [the package entry](../../README.md), the three core Skills, and the
-existing project contract before changing its requirements. Use this Skill for
-contract authoring and maintenance, including a request to input a contract.
-The requested task defines the authorized changes.
+Read [the package entry](../../README.md), the core Skills, the existing project
+contract, and the [writing guide](references/contract-writing.md). The user's
+request defines the authorized semantic change.
 
-Read [the contract writing guide](references/contract-writing.md) before
-drafting or restructuring content. It supplies the writing standard, adaptable
-entry and topic templates, a complete example, and finished-content requirements.
+## Establish meaning
 
-## Understand the intended requirements
+Read complete supplied material and applicable decisions. Preserve each
+obligation's strength, scope, owner, conditions, quantities, exceptions, approval
+boundary, validation behavior, and useful rationale. Distinguish requirements,
+recommendations, examples, and unresolved questions.
 
-Read the complete supplied material and applicable user decisions. Distinguish
-requirements from recommendations, examples, explanations, and open questions.
-Preserve owners, conditions, quantities, thresholds, prohibitions, exceptions,
-approval boundaries, and any required validation behavior.
+Resolve referenced roles, files, commands, and capabilities against the project.
+An existing capability and a requirement to implement one are different facts.
+Use established authorization; ask about remaining material contradictions or
+ambiguities while continuing independent work.
 
-Retain useful reasons that explain a present invariant, such as ownership,
-lifetime, numeric meaning, failure behavior, or an interface obligation.
-Keep explicit non-goals when they define the responsibility's boundary.
-Examples retain their stated scope; an example does not automatically create
-a universal rule.
+## Edit the owning topic
 
-Resolve referenced mechanisms, commands, roles, and files against the current
-project and authorized decisions. Distinguish an existing capability from a
-requirement to implement one. Express the obligation using its actual owner and
-current concepts. Ask about a material change in meaning that those decisions
-do not settle.
+Refine requirements in place. Merge only compatible duplicates, preserving
+conditions and exceptions. Reorganization and implementation drift do not
+authorize changes in meaning. Keep identifiers with their requirements; do not
+reuse retired identifiers or renumber for appearance. Update affected references.
 
-Reconcile the material with the current project contract and the package's
-priority rules. Use decisions already supplied by the user. Ask about a
-material contradiction or ambiguity that cannot be resolved from those
-decisions. Continue independent work and describe any unresolved requirement
-in the conversation without presenting it as settled policy.
+Keep shared requirements and navigation in `project/README.md`. Create topics
+or project Skills only for responsibilities that need separate treatment; keep
+project choices and resources under `project/`. Preserve project-owned material
+when updating the portable package. Respect protected files and action permissions.
 
-Contract authoring delivers the agreed Markdown requirements and their semantic
-review. Scope checker implementation and code acceptance separately under the
-project's authorization and validation requirements.
+Keep inputs transient. Do not persist input copies, origin records, filenames,
+hashes, mappings, notes, or conversion histories in files or caches. User-owned
+originals remain untouched. Reviews may cite current requirements and actual
+source; validation identifies the actual code, configuration, and tools used.
+Do not add static contract checkers, adapters, rule mappings, or generated example
+suites. Required project builds, tests, and runtime validation remain separate.
 
-## Write coherent topics
+## Finish
 
-Use ordinary Markdown headings, paragraphs, lists, tables, and code examples
-where they clarify meaning. Requirements can use direct words such as must,
-must not, or prefer. Their wording establishes the intended obligation.
+Compare the result with complete conversion input, or the pre-edit contract and
+authorized decisions for maintenance. Account for obligations and qualifiers,
+examples and useful context, without an input ledger. Read related topics
+together; check meaning, unique authority, current facts, links, and navigation.
 
-Keep conditions, exceptions, explanations, and examples with the requirements
-they qualify. Include only the information that exists and helps application.
-Choose a topic boundary from the requirements that need to be understood and
-maintained together.
-
-The installed project's `contract/project/README.md` contains shared project
-requirements and navigation. A small contract can fit there. Create another
-file when a real topic benefits from independent reading or maintenance.
-Describe the topic's scope and link it from the project entry. Do not create
-empty topics or prescribe a number of files, rules, headings, or lines.
-
-Keep one authoritative location for each requirement. Link related topics
-where their interaction matters. Identifiers are optional reference aids.
-Preserve an identifier when moving or regrouping the same requirement. Do not
-reuse a retired identifier for a different requirement or renumber requirements
-for display order. When an authorized split, merge, or replacement changes
-identifiers, update affected references in the same change.
-
-Project-specific conventions and exceptions belong in project topics; the
-built-in language Skills remain reusable defaults.
-
-A project Skill is useful for a recurring procedure that needs its own
-instructions. Create one only when the project actually needs that procedure.
-Keep it and its supporting files under `contract/project/`, and make it
-reachable from the relevant topic.
-
-## Change the contract directly
-
-Add an authorized requirement to the topic that owns it. Refine an existing
-requirement in place. Merge duplicates only when their meaning, scope,
-conditions, and exceptions agree.
-
-Delete or relax a requirement only when the requested change authorizes that
-semantic change. An implementation that violates a requirement is not authority
-to change it. Existing user authorization is sufficient within its scope.
-
-Reorganize, split, merge, or rename topics as needed within an authorized
-maintenance task while preserving meaning. Update affected references, links,
-and navigation in the same change. A reorganization does not itself authorize
-new requirements or the removal of an obligation.
-
-Keep user-designated protected files and external actions within their
-authorization boundaries. When updating an installed package, preserve its
-project-owned contract and resources.
-
-## Keep inputs transient
-
-Use supplied files and conversation content only for the current conversion.
-The maintained project contract is the authoritative result and must be
-understandable without its input material.
-
-Do not copy, archive, or persist inputs or input-origin records. This includes
-input filenames, hashes, source identifiers, clause mappings, source notes, and
-copies in scratch files, logs, caches, or reports. Do not create `sources/`.
-Put necessary meaning directly into the contract.
-
-Rule identifiers name the maintained contract's requirements. Code reviews and
-project checkers refer to those current requirements and the actual code,
-configuration, and tools they examine.
-
-User-owned original files are outside PCK's automatic cleanup scope. Read them
-where the user provides them. Contract maintenance does not authorize deleting
-them.
-
-## Finish the maintenance task
-
-Compare the result with the material that governs the task: supplied input for
-conversion, and the affected pre-edit contract plus authorized decisions for
-amendments or reorganization. Account for each obligation, including its scope,
-strength, conditions, exceptions, examples, and useful context. Check that moves,
-splits, and merges preserve everything outside the authorized semantic change.
-Perform this comparison during the task without persisting an input ledger.
-
-Read changed topics together with their related requirements. Resolve duplicate
-or contradictory statements, check links and navigation, and confirm that a
-reader can determine which requirements apply. Preserve the distinction between
-an example and an obligation.
-
-Complete the independent reviews in [pck-workflow](../pck-workflow/SKILL.md)
-before declaring this round's maintained files complete. Describe the completed
-scope and any unresolved decisions in the conversation. Use the host project's
-version control for contract history within its commit and publishing
-permissions. Keep the maintained contract focused on current requirements;
-describe authorized changes in the delivery conversation without adding
-maintenance-history documents.
+Complete [pck-workflow](../pck-workflow/SKILL.md), report scope and unresolved
+decisions in the conversation, and use authorized version control for history.

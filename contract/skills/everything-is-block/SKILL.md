@@ -1,36 +1,33 @@
 ---
 name: everything-is-block
-description: Keep responsibility, data flow, ownership, and lifetime clear when designing, editing, or reviewing code at module, type, function, and local-flow boundaries.
+description: Make responsibility, data flow, ownership, and lifetime visible at module, type, function, and local-operation boundaries.
 ---
 
 # Everything Is a Block
 
-Treat each module, file, type, function, and local operation as a unit with a
-coherent responsibility. Understand its owner, inputs, outputs, lifetime, and
-failure boundary before choosing its shape.
+Give each module, file, type, function, and local operation a coherent
+responsibility. Establish its owner, inputs, outputs, lifetime, and failure
+boundary. Keep state and operations with the owner of their invariants.
 
-Keep the statements that perform one operation together. Introduce a boundary
-where responsibility, data stage, ownership, or control-flow meaning changes.
-Use whitespace to expose that boundary. A small operation can be one compact
-block; examine a longer operation through its actual work and ownership stages.
+Keep one operation together; use blank lines where responsibility, data stage,
+ownership, or control-flow meaning changes. Judge local work by its immediate
+effects: preparing input, validating distinct facts, creating, configuring,
+consuming resolved input, publishing, and recording completion can be separate
+stages even within one function's purpose.
 
-Present the main flow before its supporting detail. Keep sibling operations
-at compatible abstraction levels. Preserve required execution order, resource
-lifetime, and error propagation when grouping or extracting work.
+Keep an operation with its own guard. A short calculation chain or related
+component update can form one result; closely related calls may share a success
+condition and failure handling. Names, types, calls, or a return alone do not
+require a split. Preserve coherent grouping; a shared final purpose or dependency
+does not erase a real handoff.
 
-Create a helper for a concrete responsibility, useful reuse, a test seam, or a
-lifecycle boundary. Keep the caller's data flow and ownership understandable.
-Line counts, decorative sections, and a forwarding layer alone do not justify
-an extraction.
+Read the complete unit, including branches and loops. Identify successive
+operations, then inspect original lines at their handoffs for actual whitespace.
+A brace is not a blank line. Explain a missing boundary through the work on each
+side. Check callers, ownership, and failure behavior as well as local grouping.
 
-Keep state and operations with the owner responsible for their invariants.
-For work that resolves input, prepares a value, and publishes a resource, expose
-separate stages when their data or ownership duties differ. Keep the tightly
-related statements inside each stage together.
-
-When reviewing a change, examine the responsibilities and handoffs in the
-actual code. Check whether each boundary explains an operation and whether the
-caller can still see who owns the state. Use relevant files or symbols when
-explaining a judgment. Formatting and successful parsing establish only the
-mechanical properties they inspect; cohesion and ownership require reading
-the implementation.
+Present the main flow before supporting detail and keep sibling operations at
+compatible abstraction levels. Preserve execution order, lifetime, and error
+propagation when regrouping. Extract helpers for concrete responsibilities,
+useful reuse, test seams, or lifecycle boundaries; line counts, decoration, or
+forwarding alone do not justify another layer.
