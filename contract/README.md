@@ -11,16 +11,17 @@ govern the work. Apply the three core Skills together:
 | Skill | Responsibility |
 | --- | --- |
 | [everything-is-block](skills/everything-is-block/SKILL.md) | Make responsibility, data flow, ownership, and lifetime visible. |
-| [consistency-first](skills/consistency-first/SKILL.md) | Ground open choices in suitable project evidence. |
+| [consistency-first](skills/consistency-first/SKILL.md) | Ground requirement application and open choices in suitable project evidence. |
 | [direct-statements](skills/direct-statements/SKILL.md) | State current facts and requirements directly. |
 
-The core Skills govern how work is performed; project requirements supply
-concrete decisions within their scope. Consistency First and Direct Statements
-have equal priority. For project choices, apply agreed requirements and scoped
-exceptions, then their selected project Skills, then built-in language defaults.
-Keep compatible obligations in force. Local code guides choices left open; it
-does not waive requirements. Resolve material conflicts through applicable user
-decisions or obtain the missing decision before changing the requirement.
+Consistency First is the shared method for applying all Skills and project
+requirements; each retains its own obligations and scope. This execution role
+does not give it higher authority. For project choices, apply agreed requirements
+and scoped exceptions, then their selected project Skills, then built-in language defaults.
+Keep compatible obligations in force. Local code illustrates application and
+guides open choices; it does not waive requirements. Resolve material conflicts
+through applicable user decisions or obtain the missing decision before changing
+the requirement.
 
 ## Read for the task
 

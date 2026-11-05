@@ -1,19 +1,24 @@
 ---
 name: consistency-first
-description: Resolve open implementation choices from suitable project code and history, and obtain missing significant design decisions.
+description: Ground requirement application and open choices in suitable project precedents, and obtain missing significant design decisions.
 ---
 
 # Consistency First
 
-Follow agreed requirements. For choices they leave open, establish responsibility,
-ownership, data flow, lifetime, API, and failure behavior, then search local code
-and history for the same role. Inspect the nearest symbol family and its callers;
-broaden to related modules, lifecycle stages, and mechanisms as needed.
+Before implementing or reviewing, identify the applicable requirements and search
+local code and history for how the same responsibility is expressed. Establish
+ownership, data flow, lifetime, API, and failure behavior; inspect the nearest
+symbol family and its callers, broadening to related roles and mechanisms as needed.
 
-Use precedents whose ownership and failure behavior fit. Compare conflicting
-examples and history rather than treating one occurrence as a convention.
-Carry the suitable naming, layout, lifecycle, and interface form into the work;
-cite concrete files or symbols when explaining the choice.
+Check precedents against current requirements and their fit to the responsibility,
+ownership, lifetime, and failure behavior. Proximity or repetition alone does not
+establish suitability. Use conforming examples to interpret requirements and
+resolve open choices; preserve their applicable naming, layout, lifecycle, and
+interface form. Cite concrete files or symbols and explain necessary differences.
+
+Requirements remain authoritative when examples conflict or are absent. State a
+missing precedent and follow explicit requirements and authorized decisions;
+obtain any unresolved significant decision before introducing a new pattern.
 
 Apply decisions already authorized. Ask only for unresolved significant changes
 to responsibilities, public interfaces, ownership, lifetime, threading, or
