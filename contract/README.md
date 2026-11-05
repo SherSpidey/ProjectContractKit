@@ -27,24 +27,34 @@ the requirement.
 ## Read for the task
 
 Read this entry, all three core Skills, and the full `project/README.md` when
-present. Read complete applicable topics, Skills, profiles, and references,
-including their conditions, exceptions, and examples. Select them by responsibilities,
+present. Read complete applicable topics, Skills, their references, and examples,
+including their conditions and exceptions. Select them by responsibilities,
 interfaces, owners, and consumers as well as paths; follow necessary links and
 expand the reading when scope or applicability changes.
 
-| Work | Required procedure or profile |
+The always-installed core package contains this entry, `VERSION`, the three core
+Skills, `pck-workflow`, and `pck-maintain`. Optional Skills are selected by
+responsibility during installation and recorded in the PCK block of the
+project-root agent instruction file. The block is the activation set: each entry
+is a directory name under `contract/skills/`, its `SKILL.md` must exist, and an
+unlisted optional directory is not loaded. A missing, unknown, or duplicate entry,
+or a missing block, makes the installation incomplete. If a task reaches an
+unlisted responsibility, update the installation and its dependencies under the
+project's existing authorization before editing.
+
+| Work | Required procedure or optional Skill |
 | --- | --- |
 | Changes to any files | [pck-workflow](skills/pck-workflow/SKILL.md), from task start through independent review |
 | Contract creation or maintenance | [pck-maintain](skills/pck-maintain/SKILL.md) |
-| C++ | [cpp-style](skills/cpp-style/SKILL.md) and its full rule reference |
-| C# | [csharp-style](skills/csharp-style/SKILL.md) and its full rule reference |
-| HLSL | [hlsl-style](skills/hlsl-style/SKILL.md) and its full rule reference |
-| ShaderLab or associated Unity HLSL | [shaderlab-style](skills/shaderlab-style/SKILL.md) and its full rule reference |
-| Unity APIs, serialized data, assets, or Editor operations | [unity-development](skills/unity-development/SKILL.md) and its full reference |
+| C++ | `skills/cpp-style/SKILL.md` when installed and C++ source is in scope. |
+| C# | `skills/csharp-style/SKILL.md` when installed and C# source is in scope. |
+| HLSL | `skills/hlsl-style/SKILL.md` when installed and HLSL source or stages are in scope. |
+| ShaderLab or associated Unity HLSL | `skills/shaderlab-style/SKILL.md` when installed; embedded or associated HLSL also requires HLSL Style. |
+| Unity APIs, serialized data, assets, or Editor operations | `skills/unity-development/SKILL.md` when installed; Unity C# source also requires C# Style. |
 
-Choose language and platform Skills by actual language, responsibility, and
-runtime, including embedded code and shared extensions. Unity shader guidance
-supplies its stated exceptions to HLSL defaults. Use a project profile for other
+Choose installed language and platform Skills by actual language, responsibility,
+and runtime, including embedded code and shared extensions. Unity shader guidance
+supplies its stated exceptions to HLSL defaults. Use a project Skill for other
 languages or platforms. After compaction or summary-based resumption, complete
 [context recovery](skills/pck-workflow/SKILL.md#recover-context).
 

@@ -6,7 +6,7 @@ description: Apply minimal Unity lifecycle, serialization, asset identity, and E
 # Unity Development
 
 Read the [Unity constraints](references/unity-rules.md) and the applicable
-language profiles. Use documentation for the installed Unity and package
+installed language Skills. Use documentation for the installed Unity and package
 versions; preserve project-defined owners, update stages, and validation.
 
 Apply these constraints to Unity objects, serialized data, assets, and Editor

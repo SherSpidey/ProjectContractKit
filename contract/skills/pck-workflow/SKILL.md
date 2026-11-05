@@ -11,7 +11,15 @@ review cycle.
 
 ## Work
 
-Read the material selected by [the package entry](../../README.md).
+Read the material selected by [the package entry](../../README.md). For an
+installed project, read the PCK block in the project-root agent instruction file
+and use only optional Skills listed there and present at their derived paths. If
+the block is missing, malformed, duplicated, or lists an unknown or missing
+Skill, hold the change until the installation is corrected. When maintaining PCK
+itself, repository instructions and the package contents define the available
+material; no installed-project declaration is required. If a task reaches an
+unlisted required responsibility, hold the change until the installation and
+its dependencies are updated under the project's existing authorization.
 Establish the authorized scope, affected responsibilities, owners, data flow,
 lifetimes, interfaces, and failure boundaries. Follow project branch policy;
 track the task's cumulative changes from its baseline, including commits,
@@ -26,11 +34,12 @@ agent performs required builds, tests, and runtime validation.
 ## Recover context
 
 After compaction or summary-based resumption, every agent rereads applicable
-agent instructions, the package entry, this workflow, all core Skills, the
-project entry and required shared topics, and complete applicable topics,
-language and platform Skills, profiles, and references. Contract work also
-rereads pck-maintain and its writing guide. Retrieve truncated portions;
-summaries locate progress, not requirements.
+agent instructions and, for an installed project, the PCK block in the
+project-root agent instruction file. Then reread the package entry, this
+workflow, all core Skills, the project entry and required shared topics, and
+complete applicable topics, language and platform Skills, their references, and
+examples. Contract work also rereads pck-maintain and its writing guide. Retrieve
+truncated portions; summaries locate progress, not requirements.
 
 Reconcile current files and user decisions with the task baseline, scope,
 permissions, exclusions, models, active work, findings, validation, and review
