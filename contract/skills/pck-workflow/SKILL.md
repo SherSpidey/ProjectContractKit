@@ -28,9 +28,9 @@ agent performs required builds, tests, and runtime validation.
 After compaction or summary-based resumption, every agent rereads applicable
 agent instructions, the package entry, this workflow, all core Skills, the
 project entry and required shared topics, and complete applicable topics,
-language profiles and references. Contract work also rereads pck-maintain and
-its writing guide. Retrieve truncated portions; summaries locate progress,
-not requirements.
+language and platform Skills, profiles, and references. Contract work also
+rereads pck-maintain and its writing guide. Retrieve truncated portions;
+summaries locate progress, not requirements.
 
 Reconcile current files and user decisions with the task baseline, scope,
 permissions, exclusions, models, active work, findings, validation, and review
@@ -46,7 +46,7 @@ independent reviews, concurrently where supported:
 | --- | --- |
 | `pck_review_structure` | Consistency First and EIB: local operation boundaries, responsibilities, interfaces, data flow, ownership, lifetime, and failure behavior. |
 | `pck_review_style` | Direct Statements and every applicable language rule and project style choice, applied to actual source forms. |
-| `pck_review_project` | Applicable project obligations, conditions, exceptions, authorization, and validation evidence. |
+| `pck_review_project` | Applicable platform and project obligations, conditions, exceptions, authorization, and validation evidence. |
 
 Honor explicit model assignments; role-specific assignments override the shared
 `pck_review` assignment at the same authority level. Otherwise select a capable,

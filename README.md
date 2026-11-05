@@ -5,9 +5,9 @@ ownership, dependencies, and conventions coherent as its code grows. Its
 contracts and Skills express the design decisions that should guide each change.
 
 The portable package is [contract/](contract/README.md). It contains three core
-Skills, complete C++ and HLSL writing profiles, a task workflow with independent
-reviews, and a Skill for maintaining project contracts. Project requirements
-are written as Markdown topics.
+Skills, C++, C#, HLSL, and ShaderLab writing profiles, optional Unity guidance,
+a task workflow with independent reviews, and a Skill for maintaining project
+contracts. Project requirements are written as Markdown topics.
 
 ## Use in a project
 
@@ -20,8 +20,8 @@ authorization required by that project:
 ~~~markdown
 <!-- BEGIN PCK -->
 Read `contract/README.md` before editing project files. Follow its authority
-and task-reading rules. Read all three core Skills and the applicable language
-profile and project topics. Use `contract/skills/pck-maintain/SKILL.md` to
+and task-reading rules. Read all three core Skills, applicable language and
+platform Skills, and project topics. Use `contract/skills/pck-maintain/SKILL.md` to
 create, convert, or maintain the project contract.
 Follow `contract/skills/pck-workflow/SKILL.md` from task start. Complete its
 three independent reviews before declaring this round's changes complete.
@@ -42,9 +42,9 @@ topics that agents need to understand and maintain together.
 ## Work with the contract
 
 Read the core Skills and shared project requirements for each task. Load the
-applicable language profile and project topics before making decisions they
-govern. Follow related interfaces and ownership into neighboring topics when
-the work reaches them.
+applicable language and platform Skills and project topics before making
+decisions they govern. Follow related interfaces and ownership into neighboring
+topics when the work reaches them.
 
 Follow [pck-workflow](contract/skills/pck-workflow/SKILL.md) from task start
 through the independent reviews of the completed changes. Its named review
