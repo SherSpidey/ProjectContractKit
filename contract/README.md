@@ -44,7 +44,7 @@ project's existing authorization before editing.
 
 | Work | Required procedure or optional Skill |
 | --- | --- |
-| Changes to any files | [pck-workflow](skills/pck-workflow/SKILL.md), from task start through independent review |
+| Changes to any files | [pck-workflow](skills/pck-workflow/SKILL.md), from task start through completion |
 | Contract creation or maintenance | [pck-maintain](skills/pck-maintain/SKILL.md) |
 | C++ | `skills/cpp-style/SKILL.md` when installed and C++ source is in scope. |
 | C# | `skills/csharp-style/SKILL.md` when installed and C# source is in scope. |
@@ -68,6 +68,7 @@ Without a project contract, use applicable user decisions, project instructions,
 and built-in defaults.
 
 Contract changes require authorization. Contract conformance is judged from
-source and independent review; static contract checkers, adapters, rule mappings,
-and generated example suites are not required. The project owns its separate
-build, test, and runtime validation obligations.
+source, main-agent self-review, and independent review when needed; static
+contract checkers, adapters, rule mappings, and generated example suites are not
+required. The project owns its separate build, test, and runtime validation
+obligations.

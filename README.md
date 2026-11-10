@@ -29,8 +29,7 @@ and task-reading rules. Read all three core Skills, installed language and
 platform Skills applicable to the task, and project topics. Use
 `contract/skills/pck-maintain/SKILL.md` to create, convert, or maintain the
 project contract.
-Follow `contract/skills/pck-workflow/SKILL.md` from task start. Complete its
-three independent reviews before declaring this round's changes complete.
+Follow `contract/skills/pck-workflow/SKILL.md` from task start through completion.
 After context compaction or summary-based resumption, complete the workflow's
 context recovery before continuing.
 Installed optional Skills:
@@ -68,10 +67,10 @@ topics before making decisions they govern. Follow related interfaces and
 ownership into neighboring topics when the work reaches them.
 
 Follow [pck-workflow](contract/skills/pck-workflow/SKILL.md) from task start
-through the independent reviews of the completed changes. Its named review
-assignments support host-specified models and autonomous model selection.
-Apply the project's own build, execution, and review requirements to the actual
-change.
+through completion. The main agent decides whether independent review is needed
+and selects roles for the actual change. Review assignments support host-specified
+models and autonomous selection. Apply the project's own validation and review
+requirements.
 
 Contract maintenance operates directly on the Markdown files. The agent
 preserves meaning, resolves authorized decisions, and keeps navigation useful.

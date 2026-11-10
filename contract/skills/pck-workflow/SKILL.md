@@ -1,6 +1,6 @@
 ---
 name: pck-workflow
-description: Apply the contract throughout a file-changing task and complete three independent reviews within a bounded correction cycle.
+description: Apply the contract, self-review changes, and select independent reviews and rounds according to task needs.
 ---
 
 # Work with the Project Contract
@@ -48,58 +48,56 @@ rereading and gaps before continuing. Hold work that depends on missing material
 
 ## Independent review
 
-When modifications are ready, freeze the file state and obtain three separate,
-independent reviews, concurrently where supported:
+The main agent selects review roles from the change's scope, risk, and open
+questions, subject to user and project requirements. It may skip all review
+agents when self-review suffices; state the reason. Self-review still covers all
+applicable Skills and project obligations. When independent review is needed,
+use one round by default; the user may specify another round count or roles.
 
-| Assignment | Responsibility |
+| Assignment | Review need |
 | --- | --- |
-| `pck_review_structure` | Consistency First and EIB: local operation boundaries, responsibilities, interfaces, data flow, ownership, lifetime, and failure behavior. |
-| `pck_review_style` | Direct Statements and every applicable language rule and project style choice, applied to actual source forms. |
-| `pck_review_project` | Applicable platform and project obligations, conditions, exceptions, authorization, and validation evidence. |
+| `pck_review_structure` | Consistency First and EIB when changes affect design boundaries: responsibilities, interfaces, data flow, ownership, lifetime, or failure behavior. |
+| `pck_review_style` | Independent scrutiny of Direct Statements, language forms, or project style. |
+| `pck_review_project` | Independent scrutiny of platform or project obligations, authorization, or validation evidence. |
 
-Honor explicit model assignments; role-specific assignments override the shared
-`pck_review` assignment at the same authority level. Otherwise select a capable,
-economical, fast model from available options. If launch fails, retry with the
-main agent's model and disclose it; another failure leaves the review incomplete.
+Freeze the file state and obtain only the selected reviews, independently and
+concurrently where supported. Honor explicit model assignments; role-specific
+assignments override the shared `pck_review` assignment at the same authority
+level. Otherwise select a capable, economical, fast model. If launch fails, retry
+with the main agent's model and disclose it; another failure leaves review incomplete.
 
 Give reviewers the scope, authorized decisions, baseline, cumulative changes,
-repository and contract locations, and role. Do not pass the main agent's
-reasoning or any reviewer's conclusions. Reviewers read required material before
-judging source, and may inspect history, callers, owners, and suitable precedents.
-They work read-only: no edits, builds, tests, validators, application runs,
-commits, or further agents. Each may retain its independent context for later
-rounds, reconciling current content and recovering after compaction.
+repository and contract locations, and role, without the main agent's reasoning
+or other verdicts. Reviewers read required originals and may inspect history,
+callers, owners, and precedents. They work read-only: no edits, builds, tests,
+validators, application runs, commits, or further agents. Later rounds may reuse
+their independent context, recovering after compaction.
 
-Review complete units against the applicable original clauses, including their
-exceptions. Report the source observations supporting the judgment: actual
-operation handoffs for EIB, actual declarations and expressions for style.
-Cite precise original lines and requirements; do not reconstruct source.
-Keep findings within defects introduced or materially affected by the cumulative
-change. Contract review compares maintained requirements with the pre-edit
-contract and authorized decisions. State coverage and evidence gaps; reading,
-fact extraction, or a preferred alternative alone does not establish conformance
-or a violation. Assigned roles do not waive compatible requirements.
+Review complete units against original clauses and exceptions. Cite precise
+original lines and actual operation handoffs, declarations, and expressions.
+Limit findings to defects introduced or materially affected by the cumulative
+change; contract review compares the pre-edit contract and authorized decisions.
+State coverage and evidence gaps. Reading, fact extraction, or a preferred
+alternative alone establishes neither conformance nor a violation. Assigned
+roles do not waive compatible requirements.
 
 ## Resolve and finish
 
-A round includes all three reviews of the same file state and the main agent's
-assessment. Allow at most three rounds; corrections do not reset the count.
-Collect all results before editing. Assess findings against original source and
-requirements. Request a focused evidence recheck for contradictions or omissions
-without prescribing the verdict. Missing evidence or review coverage is incomplete.
+A round includes all selected reviews of the same file state and the main
+agent's assessment. Collect all results before editing. Assess findings against
+originals; request focused evidence rechecks without prescribing the verdict.
+Missing evidence or required review coverage is incomplete.
 
-The main agent may accept or veto findings. For each veto, disclose the reviewer,
-requirement, location, proposal, reason, and affected scope or uncertainty.
-A veto cannot waive required review, change requirements, or turn missing or failed
-validation into a pass. Identify acceptance that relies on vetoes.
+Accept or veto findings against the requirements. Disclose each veto's reviewer,
+requirement, location, proposal, reason, and remaining uncertainty. A veto cannot
+waive required review or validation. After corrections, self-review the final
+content and repeat affected validation. Further independent rounds stay within
+the user's round count; corrections do not reset it. At the limit, stop automatic
+review and report unresolved findings or incomplete required reviews; do not
+publish or claim acceptance while they remain.
 
-After corrections, repeat affected validation and all three reviews of the
-cumulative change. Any further content change requires review within the same
-limit. After round three, stop automatic correction and hand unresolved findings,
-disputes, or incomplete reviews to the user; do not commit, push, or claim acceptance.
-
-Complete only when all three reviews cover the final content, findings are
-resolved or openly vetoed, and applicable project validation is complete.
-Report scope, rounds, actual models and fallbacks, vetoes, validation, and limits.
-Keep task and review evidence in the conversation, without PCK state files,
-checklists, input archives, or review histories. Publishing requires authorization.
+Complete when final self-review, selected reviews and applicable validation are
+complete, with findings resolved or openly vetoed. Report review choices or skips,
+rounds, actual models and fallbacks, vetoes, validation, and limits in the
+conversation. Do not create PCK state files or review histories. Publishing
+requires authorization.
