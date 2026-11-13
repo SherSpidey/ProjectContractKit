@@ -152,7 +152,7 @@ and non-obvious workarounds beside the invariant they concern. Avoid a comment
 that only restates the following instruction.
 
 Comments state current assumptions and obligations. Apply
-[direct-statements](../../direct-statements/SKILL.md) to comments and examples.
+[direct-statements](../../../core/direct-statements/SKILL.md) to comments and examples.
 
 ## Exceptions and review
 

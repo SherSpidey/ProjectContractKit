@@ -5,9 +5,10 @@ description: Create or maintain a concise Markdown project contract while preser
 
 # Maintain the Project Contract
 
-Read [the package entry](../../README.md), the core Skills, the existing project
-contract, and the [writing guide](references/contract-writing.md). The user's
-request defines the authorized semantic change.
+Read [the package entry](../../../README.md), the three core principle Skills,
+the existing project contract, and the
+[writing guide](references/contract-writing.md). The user's request defines the
+authorized semantic change.
 
 ## Establish meaning
 

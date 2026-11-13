@@ -11,7 +11,7 @@ review cycle.
 
 ## Work
 
-Read the material selected by [the package entry](../../README.md). For an
+Read the material selected by [the package entry](../../../README.md). For an
 installed project, read the PCK block in the project-root agent instruction file
 and use only optional Skills listed there and present at their derived paths. If
 the block is missing, malformed, duplicated, or lists an unknown or missing
@@ -36,8 +36,8 @@ agent performs required builds, tests, and runtime validation.
 After compaction or summary-based resumption, every agent rereads applicable
 agent instructions and, for an installed project, the PCK block in the
 project-root agent instruction file. Then reread the package entry, this
-workflow, all core Skills, the project entry and required shared topics, and
-complete applicable topics, language and platform Skills, their references, and
+workflow, all three core principle Skills, the project entry and required shared
+topics, and complete applicable topics and optional Skills, their references, and
 examples. Contract work also rereads pck-maintain and its writing guide. Retrieve
 truncated portions; summaries locate progress, not requirements.
 

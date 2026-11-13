@@ -144,7 +144,7 @@ assumptions, ownership, lifetime, ABI constraints, ordering requirements, and
 non-obvious algorithmic decisions. Place the explanation next to the invariant.
 
 Comments state current behavior and obligations. Apply
-[direct-statements](../../direct-statements/SKILL.md) to comments and examples.
+[direct-statements](../../../core/direct-statements/SKILL.md) to comments and examples.
 Avoid a comment that only restates the following instruction.
 
 ## Exceptions and review
