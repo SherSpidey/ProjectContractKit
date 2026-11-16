@@ -7,7 +7,8 @@ contracts and Skills express the design decisions that should guide each change.
 The portable package is [contract/](contract/README.md). Its core Skills provide
 three design principles, a task workflow with independent reviews, and project
 contract maintenance. Optional Skills provide language, platform, and tool
-guidance, including Unity and RenderDoc. Project requirements are Markdown topics.
+guidance, including Unity, Godot, and RenderDoc. Project requirements are Markdown
+topics.
 
 ## Use in a project
 
@@ -49,10 +50,12 @@ agent files. Each optional entry is a directory name under
 `contract/skills/optional/`, whose entry file is
 `contract/skills/optional/<name>/SKILL.md`. Copy and list dependency Skills
 together during installation. For example, Unity C# work includes C# Style, and
-Unity shader work with embedded or associated HLSL includes HLSL Style. A
-missing, unknown, or duplicate entry, or a missing declaration, makes the
-installation incomplete. If a task reaches an unlisted responsibility, update
-the installation under the project's existing authorization before editing.
+Unity shader work with embedded or associated HLSL includes HLSL Style. Godot
+GDScript work includes Godot Development and GDScript Style; Godot C# work includes
+Godot Development and C# Style. A missing, unknown, or duplicate entry, or a
+missing declaration, makes the installation incomplete. If a task reaches an
+unlisted responsibility, update the installation under the project's existing
+authorization before editing.
 Load an installed optional Skill only when the task reaches its language,
 platform, tool, or runtime responsibility.
 

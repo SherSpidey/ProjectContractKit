@@ -51,9 +51,11 @@ dependencies under the project's existing authorization before editing.
 | RenderDoc terminal capture, inspection, or image export | `skills/optional/renderdoc-cmd/SKILL.md` when installed. |
 | C++ | `skills/optional/cpp-style/SKILL.md` when installed and C++ source is in scope. |
 | C# | `skills/optional/csharp-style/SKILL.md` when installed and C# source is in scope. |
+| GDScript | `skills/optional/gdscript-style/SKILL.md` when installed and GDScript source is in scope. |
 | HLSL | `skills/optional/hlsl-style/SKILL.md` when installed and HLSL source or stages are in scope. |
 | ShaderLab or associated Unity HLSL | `skills/optional/shaderlab-style/SKILL.md` when installed; embedded or associated HLSL also requires HLSL Style. |
 | Unity APIs, serialized data, assets, or Editor operations | `skills/optional/unity-development/SKILL.md` when installed; Unity C# source also requires C# Style. |
+| Godot APIs, scenes, resources, serialized data, or Editor operations | `skills/optional/godot-development/SKILL.md` when installed; Godot GDScript source also requires GDScript Style, and Godot C# source also requires C# Style. |
 
 Choose installed optional Skills by actual language, platform, tool,
 responsibility, and runtime, including embedded code and shared extensions.
