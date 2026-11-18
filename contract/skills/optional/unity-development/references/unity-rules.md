@@ -3,6 +3,9 @@
 These minimal defaults follow Unity's manuals and API documentation. Apply
 them within the installed Unity version and the project's actual configuration.
 
+The project defines architecture, asset generation, networking, and acceptance
+criteria.
+
 ## Lifecycle and objects
 
 Use the documented [callback order](https://docs.unity3d.com/2022.3/Documentation/Manual/ExecutionOrder.html);
@@ -46,8 +49,15 @@ and the dedicated APIs for creation, destruction, or reparenting.
 Check the actual Domain Reload and Scene Reload settings. When
 [Domain Reload is disabled](https://docs.unity3d.com/2022.3/Documentation/Manual/DomainReloading.html),
 reset static state and event registrations that should not survive a play
-session. Verify repeated entry and exit using that configuration; do not
-change project-wide reload settings as a substitute for correct lifecycle work.
+session. Do not change project-wide reload settings as a substitute for
+correct lifecycle work.
 
-Use the project's affected Editor and Player validation paths. Its architecture,
-asset generation, networking, and acceptance rules remain project requirements.
+## Validation
+
+Use the project's affected Editor and Player checks. Follow
+[validation and acceptance](../../../core/pck-workflow/SKILL.md#validation-and-acceptance)
+for check ownership.
+
+For changes affecting the Play Mode lifecycle when Domain Reload is disabled,
+acceptance covers repeated entry and exit under the project's actual reload
+settings.

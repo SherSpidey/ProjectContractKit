@@ -1,103 +1,81 @@
 ---
 name: pck-workflow
-description: Apply the contract, self-review changes, and select independent reviews and rounds according to task needs.
+description: Apply the project contract to changes, review affected source, and establish validation and acceptance status.
 ---
 
 # Work with the Project Contract
 
 Use this workflow for changes to code, documentation, configuration, or the
-contract. Discussion and read-only review assignments do not start another
-review cycle.
+contract. Discussion and read-only reviews use the applicable requirements
+within their assigned scope.
 
-## Work
+## Prepare the change
 
-Read the material selected by [the package entry](../../../README.md). For an
-installed project, read the PCK block in the project-root agent instruction file
-and use only optional Skills listed there and present at their derived paths. If
-the block is missing, malformed, duplicated, or lists an unknown or missing
-Skill, hold the change until the installation is corrected. When maintaining PCK
-itself, repository instructions and the package contents define the available
-material; no installed-project declaration is required. If a task reaches an
-unlisted required responsibility, hold the change until the installation and
-its dependencies are updated under the project's existing authorization.
-Establish the authorized scope, affected responsibilities, owners, data flow,
-lifetimes, interfaces, and failure boundaries. Follow project branch policy;
-track the task's cumulative changes from its baseline, including commits,
-uncommitted work, additions, moves, and deletions. Exclude unrelated changes.
+Follow applicable agent instructions and [the package entry](../../../README.md)
+before editing.
 
-Implement and self-review complete responsibility units with their controlling
-clauses and exceptions at hand. Check local EIB boundaries separately from
-ownership and failure behavior, and apply language rules to actual declarations
-and expressions. Use original numbered lines when layout matters. The main
-agent performs required builds, tests, and runtime validation.
+Define the authorized scope, observable outcome, and evidence of success.
+Identify affected responsibilities, owners, data flow, lifetimes, interfaces,
+and failure boundaries. Apply
+[Consistency First](../consistency-first/SKILL.md) to the decisions and causes
+the change must address.
 
-## Recover context
+Follow project branch policy and set the task baseline. Track its cumulative
+changes across commits, uncommitted edits, additions, moves, and deletions.
+Keep that diff scoped to the task.
 
-After compaction or summary-based resumption, every agent rereads applicable
-agent instructions and, for an installed project, the PCK block in the
-project-root agent instruction file. Then reread the package entry, this
-workflow, all three core principle Skills, the project entry and required shared
-topics, and complete applicable topics and optional Skills, their references, and
-examples. Contract work also rereads pck-maintain and its writing guide. Retrieve
-truncated portions; summaries locate progress, not requirements.
+## Apply and self-review
 
-Reconcile current files and user decisions with the task baseline, scope,
-permissions, exclusions, models, active work, findings, validation, and review
-round count. Preserve outstanding obligations and briefly report the actual
-rereading and gaps before continuing. Hold work that depends on missing material.
+Implement complete responsibility units with their governing clauses and
+exceptions at hand.
+
+Review complete affected units identified by the cumulative diff. Use the
+final source and consult the baseline for removals. Follow dependencies and
+consumers far enough to verify affected interfaces and behavior. Match review
+depth to the change's reach and risk.
+
+In the same self-review, check each core principle and every applicable project
+and optional Skill requirement. Check local EIB boundaries separately from
+ownership and failure behavior. Use actual declarations and expressions for
+language rules and numbered original lines when layout matters.
+
+## Validation and acceptance
+
+Follow project and task requirements for checks, evidence, and ownership. Where
+ownership is unspecified, the main agent runs required builds, static checks,
+and automated tests, and a human performs any needed runtime acceptance such
+as gameplay, rendering, or interactive Editor behavior.
 
 ## Independent review
 
-The main agent selects review roles from the change's scope, risk, and open
-questions, subject to user and project requirements. It may skip all review
-agents when self-review suffices; state the reason. Self-review still covers all
-applicable Skills and project obligations. When independent review is needed,
-use one round by default; the user may specify another round count or roles.
+When the project or task requires independent review, or when a material risk
+or open question warrants a second assessment, read and follow the
+[independent review procedure](references/independent-review.md).
 
-| Assignment | Review need |
-| --- | --- |
-| `pck_review_structure` | Consistency First and EIB when changes affect design boundaries: responsibilities, interfaces, data flow, ownership, lifetime, or failure behavior. |
-| `pck_review_style` | Independent scrutiny of Direct Statements, language forms, or project style. |
-| `pck_review_project` | Independent scrutiny of platform or project obligations, authorization, or validation evidence. |
+## Resolve and hand off
 
-Freeze the file state and obtain only the selected reviews, independently and
-concurrently where supported. Honor explicit model assignments; role-specific
-assignments override the shared `pck_review` assignment at the same authority
-level. Otherwise select a capable, economical, fast model. If launch fails, retry
-with the main agent's model and disclose it; another failure leaves review incomplete.
+Resolve findings against the governing requirements. Correct the affected
+responsibility together with the consumers it changes.
 
-Give reviewers the scope, authorized decisions, baseline, cumulative changes,
-repository and contract locations, and role, without the main agent's reasoning
-or other verdicts. Reviewers read required originals and may inspect history,
-callers, owners, and precedents. They work read-only: no edits, builds, tests,
-validators, application runs, commits, or further agents. Later rounds may reuse
-their independent context, recovering after compaction.
+After a correction, recheck affected units and conclusions, repeat affected
+agent checks, and mark affected manual checks as pending. Reuse evidence
+that still applies to the final source, configuration, and tools.
 
-Review complete units against original clauses and exceptions. Cite precise
-original lines and actual operation handoffs, declarations, and expressions.
-Limit findings to defects introduced or materially affected by the cumulative
-change; contract review compares the pre-edit contract and authorized decisions.
-State coverage and evidence gaps. Reading, fact extraction, or a preferred
-alternative alone establishes neither conformance nor a violation. Assigned
-roles do not waive compatible requirements.
+Report implementation as ready after final self-review, selected reviews, and
+required agent checks are complete, with findings resolved or openly vetoed.
+Report review coverage, validation results, and material limits in the
+conversation. Do not create PCK state files or review histories.
 
-## Resolve and finish
+Report acceptance separately from implementation readiness. Confirm it when
+all applicable required checks pass based on results from their assigned
+owners. For pending human checks, give the setup or entry point, steps, and
+expected observation.
 
-A round includes all selected reviews of the same file state and the main
-agent's assessment. Collect all results before editing. Assess findings against
-originals; request focused evidence rechecks without prescribing the verdict.
-Missing evidence or required review coverage is incomplete.
+Resolve open findings and required review gaps before claiming acceptance or
+publishing. Publishing also requires authorization and satisfaction of any
+release gates.
 
-Accept or veto findings against the requirements. Disclose each veto's reviewer,
-requirement, location, proposal, reason, and remaining uncertainty. A veto cannot
-waive required review or validation. After corrections, self-review the final
-content and repeat affected validation. Further independent rounds stay within
-the user's round count; corrections do not reset it. At the limit, stop automatic
-review and report unresolved findings or incomplete required reviews; do not
-publish or claim acceptance while they remain.
+## Recover context
 
-Complete when final self-review, selected reviews and applicable validation are
-complete, with findings resolved or openly vetoed. Report review choices or skips,
-rounds, actual models and fallbacks, vetoes, validation, and limits in the
-conversation. Do not create PCK state files or review histories. Publishing
-requires authorization.
+After compaction or summary-based resumption, every agent follows the
+[context recovery procedure](references/context-recovery.md) before continuing.

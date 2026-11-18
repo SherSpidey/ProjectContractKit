@@ -5,10 +5,9 @@ description: Create or maintain a concise Markdown project contract while preser
 
 # Maintain the Project Contract
 
-Read [the package entry](../../../README.md), the three core principle Skills,
-the existing project contract, and the
-[writing guide](references/contract-writing.md). The user's request defines the
-authorized semantic change.
+Follow [the package entry](../../../README.md) and read the existing project
+contract and [writing guide](references/contract-writing.md). The user's request
+defines the authorized semantic change.
 
 ## Establish meaning
 
@@ -17,22 +16,26 @@ obligation's strength, scope, owner, conditions, quantities, exceptions, approva
 boundary, validation behavior, and useful rationale. Distinguish requirements,
 recommendations, examples, and unresolved questions.
 
-Resolve referenced roles, files, commands, and capabilities against the project.
-An existing capability and a requirement to implement one are different facts.
-Use established authorization; ask about remaining material contradictions or
+Locate the governing clauses and follow their references and consumers to
+identify the complete affected contract. Resolve roles, files, commands, and
+capabilities against the project. An existing capability and a requirement to
+implement one are different facts.
+
+Use established authorization. Ask about remaining material contradictions or
 ambiguities while continuing independent work.
 
 ## Edit the owning topic
 
-Refine requirements in place. Merge only compatible duplicates, preserving
-conditions and exceptions. Reorganization and implementation drift do not
-authorize changes in meaning. Keep identifiers with their requirements; do not
-reuse retired identifiers or renumber for appearance. Update affected references.
+Revise each complete requirement at its authoritative location. Update its
+affected references and remove obsolete statements in the same change. Merge
+only compatible duplicates and preserve their conditions and exceptions.
+Reorganization and implementation drift do not authorize changes in meaning.
+Keep identifiers with their requirements and reserve retired identifiers.
+Preserve existing numbering when only the presentation changes.
 
-Keep shared requirements and navigation in `project/README.md`. Create topics
-or project Skills only for responsibilities that need separate treatment; keep
-project choices and resources under `project/`. Preserve project-owned material
-when updating the portable package. Respect protected files and action permissions.
+Use the [project content layout](../../../README.md#project-content). Preserve
+project-owned material during package updates. Respect protected files and
+action permissions.
 
 Keep inputs transient. Do not persist input copies, origin records, filenames,
 hashes, mappings, notes, or conversion histories in files or caches. User-owned
@@ -43,10 +46,10 @@ suites. Required project builds, tests, and runtime validation remain separate.
 
 ## Finish
 
-Compare the result with complete conversion input, or the pre-edit contract and
-authorized decisions for maintenance. Account for obligations and qualifiers,
-examples and useful context, without an input ledger. Read related topics
-together; check meaning, unique authority, current facts, links, and navigation.
+Review the complete affected contract against the complete conversion input,
+or against the pre-edit contract and authorized decisions for maintenance. Read
+the affected topics together. Check obligations, qualifiers, examples, useful
+context, unique authority, current facts, links, and navigation.
 
 Complete [pck-workflow](../pck-workflow/SKILL.md), report scope and unresolved
 decisions in the conversation, and use authorized version control for history.

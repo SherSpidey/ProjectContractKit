@@ -3,6 +3,9 @@
 These minimal defaults follow Godot 4's manuals and API documentation. Apply
 them within the project's actual engine version, language binding, and settings.
 
+The project defines architecture, Autoload use, asset generation, networking,
+directory layout, and acceptance criteria.
+
 ## Initialization and node lifetime
 
 Follow the documented [Node callbacks](https://docs.godotengine.org/en/stable/classes/class_node.html):
@@ -76,18 +79,27 @@ scene.
 Keep [tool-script execution](https://docs.godotengine.org/en/stable/tutorials/plugins/running_code_in_the_editor.html)
 appropriate to the Editor or runtime context, using `Engine.is_editor_hint()`
 or its binding equivalent where needed. Scope mutations to the intended scene
-or resource. For Editor edits that integrate with undo history, use
+or resource.
+
+For Editor edits that integrate with undo history, use
 [EditorUndoRedoManager](https://docs.godotengine.org/en/stable/classes/class_editorundoredomanager.html)
-with the correct context and do/undo operations. Tool and Editor scripts do not
-automatically mark scene changes as unsaved; establish the required dirty state
-and verify that intended changes persist after saving and reopening.
+with the correct context and do/undo operations.
+
+When a tool or Editor script mutates a scene that must be saved, explicitly
+establish the dirty state the Editor uses to recognize unsaved scene changes.
 
 ## Validation
 
-Use the project's affected script, scene, Editor, and export validation paths.
-Check the installed tool's supported
+Use the project's affected script, scene, Editor, and export checks. Follow
+[validation and acceptance](../../../core/pck-workflow/SKILL.md#validation-and-acceptance)
+for check ownership.
+
+When using the Godot CLI, check the installed tool's supported
 [command-line options](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html).
-`--check-only` with `--script` parses for errors; it does not validate scene
-bindings, lifecycle behavior, gameplay, or rendering. Exercise those affected
-behaviors separately. Architecture, Autoload use, asset generation, networking,
-directory layout, and acceptance criteria remain project requirements.
+`--check-only` with `--script` supplies script parsing evidence.
+
+Use separate checks for affected scene bindings, lifecycle behavior, gameplay,
+and rendering.
+
+When a tool or Editor script makes scene mutations that must persist, verify
+the intended changes after saving and reopening the affected scene.

@@ -10,11 +10,15 @@ State owners, dependencies, lifetimes, interfaces, failure behavior, numeric
 limits, and validation duties wherever the requirement depends on them.
 An exception identifies its condition and required behavior, not a general waiver.
 
+For a required check, state when it applies, who performs it, what evidence
+establishes success, and any release gate it controls.
+
 ## Organization
 
-Use `contract/project/README.md` for shared requirements and topic navigation.
-Identify any topic required for every task. A small contract can remain in this
-entry; create a topic when its related requirements need independent treatment.
+Use the [project content layout](../../../../README.md#project-content). Identify
+any topic required for every task. A small contract can remain in
+`contract/project/README.md`. Create a topic when its related requirements need
+independent treatment.
 
 Give topics descriptive titles and group decisions that must be understood
 together. Keep each requirement authoritative in one place and link related

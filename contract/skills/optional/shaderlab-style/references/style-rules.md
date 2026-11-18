@@ -49,5 +49,8 @@ Choose tags, includes, variants, and render state for the actual pipeline.
 For [SRP Batcher compatibility](https://docs.unity3d.com/2022.3/Documentation/Manual/SRPBatcher.html),
 keep material constants in the required `UnityPerMaterial` constant buffer.
 Do not impose an SRP-only layout on a Built-in Render Pipeline shader.
-Validate affected material bindings, variants, and rendering through the
-project's actual validation path.
+
+Use the project's checks for affected material bindings, variants, and
+rendering. Follow
+[validation and acceptance](../../../core/pck-workflow/SKILL.md#validation-and-acceptance)
+for check ownership.
